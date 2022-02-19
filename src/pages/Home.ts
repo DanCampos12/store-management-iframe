@@ -19,5 +19,6 @@ export default class Home extends Vue {
       email: `user-${this.users.length}@meuportfol.io`,
       role: 'Integração'
     })
+    window.parent.postMessage('user:added', 'http://localhost:8080')
   }
 }
