@@ -15,7 +15,10 @@ export default class Home extends Vue {
   addUser (): void {
     this.$addUser({
       id: this.users.length,
-      name: `User - ${this.users.length + 1}`
+      name: `User-${this.users.length + 1}`,
+      email: `user-${this.users.length}@meuportfol.io`,
+      role: 'Integração'
     })
+    window.parent.postMessage('user:added', 'http://localhost:8080')
   }
 }

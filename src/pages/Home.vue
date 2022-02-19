@@ -2,6 +2,15 @@
   <div class="home-page--content">
     <v-card class="card--content">
       <v-card-text>
+        <div class="iframe-title--label">
+          <v-icon
+            style="margin-right: 4px"
+            size="20"
+          >
+            mdi-information-outline
+          </v-icon>
+          Componente carregado por iframe
+        </div>
         <img
           alt="Vue logo"
           src="../assets/logo.png"
@@ -41,12 +50,21 @@
 
   .card--content {
     transform: translate(0);
-    max-width: 600px;
-    min-width: 400px;
+    width: 100%;
     .v-card__text {
       display: flex;
       flex-direction: column;
       align-items: center;
+      .iframe-title--label {
+        display: flex;
+        align-items: center;
+        font-family: 'Roboto';
+        font-size: 14px;
+        color: #424242;
+        font-weight: 500;
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
     }
   }
 
@@ -54,5 +72,8 @@
     font-family: 'Roboto' !important;
     color: white !important;
     background: #E86C30 !important;
+    margin-bottom: 4px;
+    margin-right: 8px;
   }
+
 </style>
