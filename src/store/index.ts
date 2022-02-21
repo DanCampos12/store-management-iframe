@@ -25,14 +25,17 @@ export default new Vuex.Store({
         email: 'rafael.neves@meuportfol.io',
         role: 'Tech Lead'
       }
-    ] as User[]
+    ] as User[],
+    broadcast: new BroadcastChannel('user-list')
   },
   mutations: {
     addUser (state, user: User) {
       state.users.push(user)
+      state.broadcast.postMessage('user:added')
     },
     removeUser (state, userIndex: number) {
       state.users.splice(userIndex, 1)
+      state.broadcast.postMessage('user:removed')
     }
   },
   actions: {
