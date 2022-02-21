@@ -9,6 +9,6 @@ export default class UserListComponent extends Vue {
 
   removeUser (indexUser: number): void {
     this.$removeUser(indexUser)
-    window.parent.postMessage('user:removed', 'http://localhost:8080')
+    window.parent.postMessage('user:removed', 'http://app1.local')
   }
 }

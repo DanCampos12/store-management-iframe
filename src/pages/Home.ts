@@ -12,6 +12,8 @@ export default class Home extends Vue {
   @State('users') readonly users!: User[]
   @Mutation('addUser') readonly $addUser!: (user: User) => void
 
+  broadcast = new BroadcastChannel('user-list')
+
   addUser (): void {
     this.$addUser({
       id: this.users.length,
@@ -19,6 +21,6 @@ export default class Home extends Vue {
       email: `user-${this.users.length}@meuportfol.io`,
       role: 'Integração'
     })
-    window.parent.postMessage('user:added', 'http://localhost:8080')
+    this.broadcast.postMessage('user:added')
   }
 }
