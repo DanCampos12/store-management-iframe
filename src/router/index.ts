@@ -13,8 +13,6 @@ const routes: Array<RouteConfig> = [
 ]
 
 const router = new VueRouter({
-  mode: 'history',
-  base: 'app2',
   routes
 })
 
