@@ -1,0 +1,17 @@
+version: 0.0
+phases:
+  pre_build:
+    commands: 
+      - yarn
+  build:
+    commands:
+      - echo Build iniciado em `date`
+      - echo Baixando e Compilando Projeto
+      - yarn build
+  post_build:
+    commands:
+      - echo Build finalizado em `date`
+artifacts:
+  files:
+    - '**/*'
+  base-diretory: dist
