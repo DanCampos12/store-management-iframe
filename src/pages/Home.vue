@@ -9,7 +9,7 @@
           >
             mdi-information-outline
           </v-icon>
-          Componente carregado por iframe
+          Componente carregado por iframe (Teste de Implemetação AWS)
         </div>
         <img
           alt="Vue logo"
