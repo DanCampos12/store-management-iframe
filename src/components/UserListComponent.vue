@@ -4,7 +4,7 @@
     class="user-list--content"
   >
     <div class="user-list-title--label">Lista de Usuários:</div>
-    <div class="scroller" style="max-height: calc(400px - 220px);">
+    <div class="scroller" style="max-height: calc(400px - 216px);">
       <div
         class="user-line--content"
         v-for="(user, index) in users"
