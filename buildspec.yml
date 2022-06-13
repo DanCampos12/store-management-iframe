@@ -1,13 +1,17 @@
 version: 0.1
 phases:
-  install:
-    runtime-versions:
-      nodejs: 14
-    commands:
+  pre_build:
+    commands: 
       - yarn
   build:
     commands:
+      - echo Build iniciado em `date`
+      - echo Baixando e Compilando Projeto
       - yarn build
   post_build:
     commands:
-      - aws s3 cp dist s3://user-list-app-poc --recursive --acl public-read
+      - echo Build finalizado em `date`
+artifacts:
+  files:
+    - '**/*'
+  base-directory: dist
