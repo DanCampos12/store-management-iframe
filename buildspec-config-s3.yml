@@ -1,0 +1,13 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - yarn
+  build:
+    commands:
+      - yarn build
+  post_build:
+    commands:
+      - aws s3 cp dist s3://user-list-app-prod --recursive --acl public-read
