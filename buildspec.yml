@@ -1,7 +1,7 @@
 version: 0.2
 env:
   variables:
-    S3_BUCKET: ${env.$ENVIRONMENT}.S3_BUCKET
+    S3_BUCKET: $ENVIRONMENT.S3_BUCKET
 phases:
   install:
     runtime-versions:
@@ -13,4 +13,5 @@ phases:
       - yarn build
   post_build:
     commands:
+      - echo $S3_BUCKET
       - aws s3 sync --delete ./dist $S3_BUCKET
