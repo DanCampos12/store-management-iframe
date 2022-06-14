@@ -1,7 +1,7 @@
 version: 0.2
 env:
   variables:
-    S3_BUCKET: $ENVIRONMENT.S3_BUCKET
+    S3_BUCKET: "s3://user-list-app-prod"
 phases:
   install:
     runtime-versions:
