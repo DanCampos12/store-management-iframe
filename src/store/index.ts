@@ -47,6 +47,12 @@ export default new Vuex.Store({
             name: 'Rafael Neves',
             email: 'rafael.neves@meuportfol.io',
             role: 'Tech Lead'
+          },
+          {
+            id: 3,
+            name: 'Tais Campos',
+            email: 'tais.campos@meuportfol.io',
+            role: 'UX Designer'
           }
         ] as User[]
       }
