@@ -10,4 +10,4 @@ phases:
       - yarn build
   post_build:
     commands:
-      - aws s3 cp dist s3://user-list-app-prod --recursive
+      - aws s3 sync ./dist s3://user-list-app-prod --delete
