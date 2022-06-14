@@ -1,7 +1,7 @@
 version: 0.2
 env:
   variables:
-    - export NODE_ENV=development
+    S3_BUCKET: ${env.$ENVIRONMENT}.S3_BUCKET
 phases:
   install:
     runtime-versions:
